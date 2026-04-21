@@ -1,0 +1,27 @@
+[
+  {
+    "scene": 1,
+    "script": "매일 아침 몸이 천근만근이신가요? 50대, 노화의 속도가 결정되는 골든타임입니다.",
+    "image_prompt": "Vertical 9:16 aspect ratio. A sophisticated 50-year-old person looking slightly fatigued while waking up in a modern bedroom, cinematic morning lighting, photorealistic, high resolution, 8k."
+  },
+  {
+    "scene": 2,
+    "script": "거창한 운동보다 중요한 첫 번째 습관! 기상 직후 '미지근한 물 한 잔'이 혈관을 살립니다.",
+    "image_prompt": "Vertical 9:16 aspect ratio. A close-up of a clear glass of water on a kitchen counter illuminated by morning sun, clean background, photorealistic, 8k."
+  },
+  {
+    "scene": 3,
+    "script": "두 번째는 식후 5분 제자리걸음. 근육 손실을 막고 치솟는 식후 혈당을 꽉 잡아줍니다.",
+    "image_prompt": "Vertical 9:16 aspect ratio. A healthy looking 50-year-old person doing light marching in place in a bright living room, wearing comfortable activewear, energetic mood."
+  },
+  {
+    "scene": 4,
+    "script": "세 번째는 하루 한 번 '10분 멍 때리기'. 뇌에 휴식을 주어 치매를 예방하는 가장 강력한 방법이죠.",
+    "image_prompt": "Vertical 9:16 aspect ratio. A 50-year-old person looking out of a window with a peaceful, relaxed expression, warm sunset lighting, soft focus, serene atmosphere."
+  },
+  {
+    "scene": 5,
+    "script": "작은 습관 세 가지가 노후의 운명을 바꿉니다. 오늘 당장 실천해 보세요! 건강 상식은 구독과 좋아요!",
+    "image_prompt": "Vertical 9:16 aspect ratio. A confident and vibrant senior person smiling brightly at the camera outdoors, healthy glow, inspiring and positive mood, professional portrait."
+  }
+]
