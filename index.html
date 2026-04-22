@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50대 건강 쇼츠 대본 프리뷰</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ECC71;
+            --dark: #2C3E50;
+            --light: #F8F9FA;
+            --accent: #E67E22;
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background: #121212;
+            color: white;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #2ECC71, #27AE60);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .scene-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        .scene-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        .scene-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .script {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #eee;
+        }
+        .prompt-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #aaa;
+            border-left: 4px solid var(--accent);
+        }
+        .prompt-tag {
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .preview-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎥 50대 건강 상식 쇼츠 대본</h1>
+        
+        <div id="scenes-container"></div>
+    </div>
+
+    <script>
+        const planData = [
+          {
+            "scene": 1,
+            "script": "요즘 자꾸 기운 없고 금방 지치시나요? 단순히 나이 탓이 아닐 수 있습니다.",
+            "image_prompt": "햇살이 비치는 현대적인 거실에서 약간 피로해 보이는 세련된 50대 인물, 영화적 조명, 사실적인 묘사, 고해상도, 8k.",
+            "image_prompt_en": "A sophisticated 50-year-old person looking slightly fatigued in a sunlit, modern living room, cinematic lighting, photorealistic, high resolution, 8k.",
+            "preview_img": "preview_img.png"
+          },
+          {
+            "scene": 2,
+            "script": "50대부터는 매년 근육이 1%씩 사라집니다. 근육이 줄면 노화의 속도는 무려 2배나 빨라지죠.",
+            "image_prompt": "수축하는 인간의 근육 섬유를 3D 의료 시뮬레이션으로 시각화함, 주황빛으로 빛나는 에너지 라인, 깨끗한 의료 배경, 과학적이고 매끄러운 스타일.",
+            "image_prompt_en": "A 3D medical visualization of human muscle fibers shrinking, glowing orange energy lines, clean medical background, scientific and sleek style.",
+            "preview_img": "preview_img2.png"
+          },
+          {
+            "scene": 3,
+            "script": "해답은 바로 '저속 노화' 식단! 흰 쌀밥 대신 잡곡밥을, 설탕보다는 양질의 단백질을 선택하세요.",
+            "image_prompt": "건강한 식단을 위에서 촬영한 아름다운 사진: 잡곡밥(보라색 쌀), 구운 생선, 화려한 채소, 밝고 식욕을 돋우는 조명, 프리미엄 음식 사진.",
+            "image_prompt_en": "A beautiful top-down shot of a healthy meal: bowl of mixed grains (purple rice), grilled fish, and colorful vegetables, bright and appetizing lighting, premium food photography.",
+            "preview_img": "preview_img3.png"
+          },
+          {
+            "scene": 4,
+            "script": "운동은 하루 10분이면 충분합니다. 의자를 잡고 하는 스쿼트만으로도 '근육 연금'을 든든하게 쌓을 수 있습니다.",
+            "image_prompt": "최소한의 디자인을 갖춘 홈짐에서 의자를 이용해 안정적으로 스쿼트를 하는 건강한 중년, 스타일리시한 운동복 착용, 밝고 활기찬 분위기.",
+            "image_prompt_en": "A healthy-looking middle-aged person performing a controlled chair squat in a minimalist home gym, wearing stylish activewear, bright and energetic atmosphere.",
+            "preview_img": "preview_img4.png"
+          },
+          {
+            "scene": 5,
+            "script": "근육은 노후의 가장 강한 보험입니다. 오늘부터 시작해 보세요! 더 많은 정보를 원하시면 구독과 좋아요!",
+            "image_prompt": "공원 야외에서 카메라를 보며 미소 짓는 자신감 있고 활기찬 시니어, 노을빛 조명, 영감을 주는 긍정적인 분위기, 전문적인 인물 사진.",
+            "image_prompt_en": "A confident and vibrant senior person standing outdoors in a park, smiling at the camera, glowing sunset light, inspiring and positive mood, professional portrait.",
+            "preview_img": "preview_img5.png"
+          }
+        ];
+
+        const container = document.getElementById('scenes-container');
+
+        planData.forEach(data => {
+            const card = document.createElement('div');
+            card.className = 'scene-card';
+            
+            let imgHtml = '';
+            if (data.preview_img) {
+                imgHtml = `<img src="${data.preview_img}" class="preview-img" alt="Scene Preview">`;
+            }
+
+            card.innerHTML = `
+                <div class="scene-header">
+                    <span>SCENE ${data.scene}</span>
+                </div>
+                <div class="script">"${data.script}"</div>
+                <div class="prompt-box">
+                    <span class="prompt-tag">🎨 AI 이미지 프롬프트 (KR)</span>
+                    ${data.image_prompt}
+                    <div style="margin-top: 10px; font-size: 0.8rem; color: #777; font-style: italic;">
+                        English: ${data.image_prompt_en}
+                    </div>
+                </div>
+                ${imgHtml}
+            `;
+            container.appendChild(card);
+        });
+    </script>
+</body>
+</html>
